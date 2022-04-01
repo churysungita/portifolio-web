@@ -84,7 +84,14 @@ float: right;
         }
 
         .img-fluid{
-            margin-bottom: 25px;
+        
+            float: left;        
+           margin-bottom: 25px;
             width: 100%;
             margin-right: auto;
+            background-color: aliceblue;
+
         }
+
+        /* added---- u shape */
+ 
