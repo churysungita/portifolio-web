@@ -1,6 +1,4 @@
-{ % load static % }
-<!DOCTYPE html>
-
+{% load static %}
 <html lang="en">
 
 <head>
@@ -24,7 +22,7 @@
 <body>
 
 
-
+{% block content %}
     <section id="nav-bar">
         <nav class="navbar navbar-expand-sm navbar-light ">
             <div class="container-fluid ">
@@ -97,7 +95,7 @@
 
                 <div class="row">
                     <div class="col-md-6 mx-auto">
-                        <img src="{% static 'assets/images/images/churyone.png'% }" alt="Image">
+                        <img src="{% static 'assets/images/images/churyone.png'%}" alt="me">
                     </div>
                     <div class="col-md-6">
 
@@ -151,7 +149,7 @@
 
 
                                         <div class="card card-custom bg-white border-white border-0">
-                                            <div class="card-custom-img" style="background-image: url(/images/images/services.jpg);"></div>
+                                            <div class="card-custom-img" style="background-image: url({% static 'assets/images/images/services.jpg'%});"></div>
                                             <div class="card-custom-avatar">
                                                 <img class="img-fluid" src="{% static 'assets/images/images/react-logo.svg' %}" alt="Avatar" />
                                             </div>
@@ -166,7 +164,7 @@
                                     </div>
                                     <div class="col-md-6 col-lg-4 pb-3">
                                         <div class="card card-custom bg-white border-white border-0">
-                                            <div class="card-custom-img" style="background-image: url(/images/images/services.jpg);"></div>
+                                            <div class="card-custom-img" style="background-image: url({% static 'assets/images/images/services.jpg'%});"></div>
                                             <div class="card-custom-avatar">
                                                 <img class="img-fluid" src="{% static 'assets/images/images/brackets.svg' %}" alt="Avatar" />
                                             </div>
@@ -180,7 +178,7 @@
                                     <div class="col-md-6 col-lg-4 pb-3">
 
                                         <div class="card card-custom bg-white border-white border-0">
-                                            <div class="card-custom-img" style="background-image: url(/images/images/services.jpg);"></div>
+                                            <div class="card-custom-img" style="background-image: url({% static 'assets/images/images/services.jpg'%});"></div>
                                             <div class="card-custom-avatar">
                                                 <img class="img-fluid" src="{% static 'assets/images/images/digital-marketing.svg' %}" alt="Avatar" />
                                             </div>
@@ -326,15 +324,15 @@
             </div>
         </section>
         <!-- Team -->
-        <!-- -------footer section -->
+     
         <section id="footer ">
-            <img src="{% static 'assets/images/images/side-element.svg' %} " alt="footer " class="footer-img ">
+            <img src="{% static 'assets/images/images/side-element.svg' %}" alt="footer " class="footer-img ">
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-4 footer-box ">
                         <a class="navbar-brand " href="# ">
                             <h3>
-                                <img src="{% static 'assets/images/images/logo-two.png' %} ">
+                                <img src="{% static 'assets/images/images/logo-two.png' %}">
                             </h3>
                         </a>
                         <p>I work with a passion of taking challenges and creating new ones in entreprenuarial and advertising sector.</p>
@@ -371,9 +369,9 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js "></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js "></script>
-        <script src="{% static 'assets/js/typewritter.js' %} "></script>
-        <script src="{% static 'assets/js/navbar.js' %} "></script>
-        <script src="{% static 'assets/js/scroll.js' % } "></script>
+        <script src="{% static 'assets/js/typewritter.js' %}"></script>
+        <script src="{% static 'assets/js/navbar.js' %}"></script>
+        <script src="{% static 'assets/js/scroll.js' % }"></script>
         <!-- ----Smooth Scroll -->
         <script>
             var Scroll = new SmoothScroll('a[href="# " ] ');
@@ -382,5 +380,4 @@
 
 </html>
 
-</html>
-{% endblock %}
+{% endblock content %}
