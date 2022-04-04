@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+nav .container ul li.active {
+    background-color: #3b49df;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+nav .container ul li.active a {
+    color: #ffffff;
+}
