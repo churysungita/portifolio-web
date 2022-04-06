@@ -7,9 +7,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def index(request):
-    project=project.objects.all()
+   
+    p1=project.objects.all()
+    
     context={
-        "myproject":project
+        "myproject":p1
     }
     return render(request, 'index.html',context)
   

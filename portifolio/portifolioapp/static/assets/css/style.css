@@ -510,7 +510,6 @@ a:focus {
 }
 
 .backside {
-    position: absolute;
     top: 0;
     left: 0;
     background: white;
@@ -648,4 +647,12 @@ a:focus {
     margin-bottom: 0;
     padding-bottom: 20px;
     text-align: center;
+}
+
+
+/* ======= */
+
+.cstm-height-card .card-img-top {
+    height: 100px;
+    object-fit: cover;
 }

@@ -201,7 +201,6 @@
 
         <!-- Team -->
         <section id="team" class="pb-5">
-
             <div class="container">
                 <div class="heading">
                     <h4>My Project<sup>____</sup></h4>
@@ -210,50 +209,34 @@
                     </h5>
                 </div>
 
-                <div class="row">
+
+        <!-- Team member -->
+                     
+              <div class="row mb-5 cstm-height-card">
                 {% for proj in myproject %}
-                    <!-- Team member -->
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                            <div class="mainflip">
-                                <div class="frontside">
-                                    <div class="card">
-                                        <div class="card-body text-center">
-                                            <p><img class=" img-fluid" src="{% static 'assets/images/images/cdq.PNG' %}" alt="card image"></p>
-                                            <h4 class="card-title">{{proj.title}}</h4>
-                                            <p class="card-text">{{proj.text}}</p>
-                                            <a href="" class="btn btn-primary btn-sm"><i class="fa fa-plus">{{proj.link}}</i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="backside">
-                                    <div class="card">
-                                        <div class="card-body text-center mt-4">
-                                            <h4 class="card-title">CDQ GROUP COMPANY</h4>
-                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <button type="btn btn-primary btn-sm" class="btn-link"><a target="_blank" href="#" > Visit Now</a>
-                                                       
-                                                    </button>
 
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-4 mt-5">
+                        <div class="card">
+                        
+                            <img src="{{ proj.project_image.url }}" class="card-img-top" alt="project image">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ proj.title }}</h5>
+                                <p class="card-text">{{ proj.text }}</p>
+                               
+                                <a href="{{ proj.link }}" class="btn btn-sm btn-primary">View Project</a>
                             </div>
                         </div>
                     </div>
-                   {% endfor %}
-                    <!-- ./Team member -->
+                {% endfor %}
+	            	</div>
 
                 </div>
             </div>
         </section>
-        <!-- Team -->
-     
+        </div>
+    </div>
+</section>
+<!-- Team -->
         <section id="footer" style="background-color:#212121">
             <img src="{% static 'assets/images/images/side-element.svg' %}" alt="footer " class="footer-img ">
             <div class="container ">
@@ -276,10 +259,10 @@
 
                     <div class="col-md-4 footer-box ">
                         <p><b>Meet Me On</b></p>
-                        <a href="https://www.facebook.com/chury.sungita/"><i class="fa fa-facebook "></i></a>
-                        <a href="# "><i class="fa fa-twitter "></i></a>
-                        <a href="# "><i class="fa fa-linkedin "></i></a>
-                        <a href="https://github.com/churysungita/portifolio-web"><i class="fa fa-github "></i></a>
+                        <a href="https://www.facebook.com/chury.sungita/" target="_blank"><i class="fa fa-facebook "></i></a>
+                        <a href="https://twitter.com/CSungita " target="_blank"><i class="fa fa-twitter "></i></a>
+                        <a href="https://www.linkedin.com/in/azizi-sungita-b22238236/" target="_blank"><i class="fa fa-linkedin "></i></a>
+                        <a href="https://github.com/churysungita/" target="_blank"><i class="fa fa-github "></i></a>
                     </div>
 
                 </div>
@@ -298,10 +281,10 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js "></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js "></script>
-        <script src="{% static 'assets/js/typewritter.js' %}"></script>
-        <script src="{% static 'assets/js/navbar.js' %}"></script>
-        <script src="{% static 'assets/js/scroll.js % }"></script>
-        <!-- ----Smooth Scroll -->
+        <script src="{% static 'assets/js/typewritter.js'%}"></script>
+        <script src="{% static 'assets/js/navbar.js'%}"></script>
+        <script src="{% static 'assets/js/scroll.js'%}"></script>
+   
 
         <script>
             var Scroll = new SmoothScroll('a[href="# " ] ');

@@ -6,7 +6,9 @@ from django.db import models
 class project (models.Model):
     title=models.CharField(max_length=50)
     text=models.TextField(max_length=100)
-    image=models.ImageField(upload_to='media/')
+    project_image=models.ImageField(upload_to='media/')
+    
     link=models.URLField(max_length=50)
+
     def _str_(self):
         return self.title
